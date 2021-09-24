@@ -63,7 +63,7 @@ public class ProductController {
     }
 
 
-    @RequestMapping(method = RequestMethod.GET , path = "api/product/find_by_rate_grater")
+    @RequestMapping(method = RequestMethod.GET , path = "api/product/find_by_rate_les_and_grater")
     public ResponseEntity<List<ProductDto>> findProductsBetweenRates(@RequestParam double less , @RequestParam double more){
         return ResponseEntity.ok(productService.findProductsByRateIsBetween(less, more));
     }
